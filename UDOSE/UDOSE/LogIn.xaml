@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UDOSE.LogIn"
+             Title="UDOSE LogIn"
+             >
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout Orientation="Vertical" Padding="10" BackgroundColor="White"  >
+              
+                <Frame  VerticalOptions="CenterAndExpand" HasShadow="True" CornerRadius="5">
+                    <StackLayout Orientation="Vertical" Spacing="10">
+                        <Image Source="Logo.png" Aspect="AspectFit" HeightRequest="50" WidthRequest="200"></Image>
+                        <StackLayout Orientation="Horizontal" BackgroundColor="White">
+                            <AbsoluteLayout Padding="10" >
+                                <Image Source="Email.png" HeightRequest="30" WidthRequest="30" Aspect="AspectFit" HorizontalOptions="Start" VerticalOptions="Start"/>
+                            </AbsoluteLayout>
+                            <Entry x:Name="Email" Opacity="0.5" MaxLength="25" HorizontalOptions="FillAndExpand" Keyboard="Email" Placeholder="Enter Email here" PlaceholderColor="Gray" HeightRequest="40" TextColor="Black" TextChanged="Email_TextChanged" />
+
+                        </StackLayout>
+                        <Label x:Name="EmailIdErrorLabel" TextColor="Red" />
+                        <StackLayout Orientation="Horizontal" BackgroundColor="White">
+                            <AbsoluteLayout Padding="10">
+                                <Image Source="Password.png"  HeightRequest="30" WidthRequest="30" Aspect="AspectFit" HorizontalOptions="Start" VerticalOptions="Start"/>
+                            </AbsoluteLayout>
+                            <Entry  x:Name="Password" Opacity="0.5" HorizontalOptions="FillAndExpand"  Text="{Binding Password}" Placeholder="Password"   
+                           PlaceholderColor="Gray" MaxLength="20" HeightRequest="40" IsPassword="True" TextColor="Black">
+                            </Entry>
+                        </StackLayout>
+                        <Label x:Name="ExistErrorlabel" TextColor="Red" HorizontalTextAlignment="Center"/>
+                        <StackLayout>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Switch x:Name="MainSwitch" Grid.Row="0" Grid.Column="0" Toggled="MainSwitch_Toggled" />
+                                <Label x:Name="Remember" Text="Remember me?" Grid.Row="0" Grid.Column="1" />
+                            </Grid>
+                        </StackLayout>
+                        <Button x:Name="btnLogIn" Text="Login" TextColor="Gray" BorderColor="Gray" BorderWidth="1" FontAttributes="None" FontSize="Medium" HorizontalOptions="FillAndExpand" BackgroundColor="White" Clicked="btnLogIn_Clicked" />
+                        <StackLayout>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button x:Name="btnForgotPassword" BackgroundColor="White" BorderColor="Gray" BorderWidth="1" Text="Forgot Password?" Clicked="btnForgotPassword_Clicked" TextColor = "Gray" FontSize="Medium" Grid.Column="1" HorizontalOptions="EndAndExpand"/>
+                                <Button x:Name="btnRegister" BorderColor="Gray" BackgroundColor="White"  Text="Register" BorderWidth="1" Clicked="btnRegister_Clicked" TextColor = "Gray" FontSize="Medium" Grid.Column="0" HorizontalOptions="Start"/>
+                            </Grid>
+                        </StackLayout>
+                    </StackLayout>
+
+                </Frame>
+            </StackLayout>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

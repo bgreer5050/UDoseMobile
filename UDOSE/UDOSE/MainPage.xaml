@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:UDOSE"
+             x:Class="UDOSE.MainPage"
+             Title="UDOSE"
+             BackgroundColor="White">
+
+
+    <ContentPage.Content>
+        <Grid>
+
+
+            
+            <StackLayout Orientation="Vertical" BackgroundColor="White" >
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="10">
+                    <Button x:Name="btnRX" Text="RX" TextColor="Gray" BorderColor="Gray" BorderWidth="1" FontAttributes="None" FontSize="Medium" HorizontalOptions="Center" BackgroundColor="White" Clicked="btnRX_Clicked" />
+                    <Button x:Name="btnControls" Text="Controls" TextColor="Gray" BorderColor="Gray" BorderWidth="1" FontAttributes="None" FontSize="Medium" HorizontalOptions="Center" BackgroundColor="White" Clicked="btnControls_Clicked" />
+                    <Button x:Name="btnHazourdous" Text="Hazardous"  TextColor="Gray" BorderColor="Gray" BorderWidth="1" FontAttributes="None" FontSize="Medium" HorizontalOptions="Center" BackgroundColor="White" Clicked="btnHazourdous_Clicked" />
+                </StackLayout>
+                <BoxView HeightRequest="5" VerticalOptions="Center"  />
+                <Frame VerticalOptions="CenterAndExpand" HasShadow="True" CornerRadius="5">
+                    <StackLayout Orientation="Vertical" Spacing="10">
+                        <Label Text="Welcome" HorizontalOptions="CenterAndExpand" FontSize="30"></Label>
+                        <BoxView HeightRequest="5" VerticalOptions="Center" Color="Gray" />
+                        <Image Source="Logo.png" Aspect="AspectFit" HeightRequest="200" WidthRequest="200"></Image>
+                        <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                            <Button x:Name="btnLogIn" Text="Login" BorderWidth="1" BorderColor="Gray" TextColor="Gray" FontAttributes="None" FontSize="Medium" HorizontalOptions="Center" BackgroundColor="White" Clicked="btnLogIn_Clicked" />
+                            <Button x:Name="btnSignUp" BorderWidth="1" Text="SignUp" TextColor="Gray" BorderColor="Gray" FontAttributes="None" FontSize="Medium" HorizontalOptions="Center" BackgroundColor="White" Clicked="btnSignUp_Clicked" />
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+        </Grid>
+
+    </ContentPage.Content>
+
+
+
+</ContentPage>

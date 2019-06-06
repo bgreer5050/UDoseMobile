@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UDOSE.View.SignUp"
+             Title="UDOSE Register">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <Grid>
+               
+                <StackLayout Orientation="Vertical" Padding="10" >
+                       
+                        <BoxView HeightRequest="5" VerticalOptions="Center"/>
+                    <Frame VerticalOptions="CenterAndExpand" HasShadow="True" CornerRadius="5" >
+                        
+                        <StackLayout Orientation="Vertical" Spacing="5">
+                                <Image Source="Logo.png" Aspect="AspectFit" HeightRequest="50" WidthRequest="200"></Image>
+                                <Label x:Name="lblSignUp" HorizontalOptions="Center"></Label>
+                            <Label x:Name="ValidateMessageShow" Text="{Binding ValidateMessage, Mode=TwoWay}" TextColor="Red" XAlign="Center" ></Label>
+                            <StackLayout Orientation="Horizontal" BackgroundColor="White">
+                                <AbsoluteLayout Padding="10">
+                                        <Image Source="userImage.png"  HeightRequest="30" WidthRequest="30" Aspect="AspectFit" HorizontalOptions="Start" VerticalOptions="Start"/>
+                                </AbsoluteLayout>
+                                <Entry x:Name="FirstName" MaxLength="15" Opacity="0.5" HorizontalOptions="FillAndExpand"  Placeholder="First Name"  PlaceholderColor="#676578" HeightRequest="40" TextColor="Black" Text="{Binding FirstName}"></Entry>
+                            </StackLayout>
+                            <Label x:Name="lblFirstName"></Label>
+                            <StackLayout Orientation="Horizontal" BackgroundColor="White">
+                                <AbsoluteLayout Padding="10">
+                                        <Image Source="userImage.jpg"  HeightRequest="30" WidthRequest="30" Aspect="AspectFit" HorizontalOptions="Start" VerticalOptions="Start"/>
+                                </AbsoluteLayout>
+                                    <Entry x:Name="LastName" Opacity="0.5" MaxLength="15" HorizontalOptions="FillAndExpand" Placeholder="Last Name" PlaceholderColor="#676578" HeightRequest="40" TextColor="Black" Text="{Binding LastName}" />
+                            </StackLayout>
+                            <Label x:Name="lblLastName"></Label>
+                            <StackLayout Orientation="Horizontal" BackgroundColor="White">
+                                <AbsoluteLayout Padding="10" >
+                                        <Image Source="Email.png" HeightRequest="30" WidthRequest="30" Aspect="AspectFit" HorizontalOptions="Start" VerticalOptions="Start"/>
+                                </AbsoluteLayout>
+                                    <Entry x:Name="EmailId" MaxLength="30" Opacity="0.5" HorizontalOptions="FillAndExpand" Placeholder="Email Address" PlaceholderColor="#676578" Keyboard="Email" TextColor="Black" Text="{Binding EmailId}">
+                                </Entry>
+                            </StackLayout>
+                            <Label x:Name="lblEmailid"></Label>
+                            <StackLayout Orientation="Horizontal"  BackgroundColor="White">
+                                <AbsoluteLayout Padding="10">
+                                    <Image Source="Password.png"  HeightRequest="30" WidthRequest="30" Aspect="AspectFit" HorizontalOptions="Start" VerticalOptions="Start"/>
+                                </AbsoluteLayout>
+                                    <Entry x:Name="Password" MaxLength="15" Opacity="0.5" HorizontalOptions="FillAndExpand"  Placeholder="Password" PlaceholderColor="#676578" HeightRequest="40" IsPassword="True" TextColor="Black"  Text="{Binding Password}">
+                                </Entry>
+                            </StackLayout>
+                            <Label x:Name="lblPassword"  TextColor="Red" ></Label>
+                            <StackLayout Orientation="Horizontal" BackgroundColor="White">
+                                <AbsoluteLayout Padding="10">
+                                        <Image Source="companyName.png"  HeightRequest="30" WidthRequest="30" Aspect="AspectFit" HorizontalOptions="Start" VerticalOptions="Start"/>
+                                </AbsoluteLayout>
+                                    <Entry x:Name="CompanyName" Opacity="0.5" HorizontalOptions="FillAndExpand" Placeholder="Company Name" MaxLength="10" PlaceholderColor="#676578" TextColor="Black"  Text="{Binding MobileNumber}"  >
+                                </Entry>
+                            </StackLayout>
+                            <Label x:Name="lblCompanyName" TextColor="Red"></Label>
+                            <StackLayout Orientation="Horizontal" BackgroundColor="White">
+                                <AbsoluteLayout Padding="10">
+                                        <Image Source="OfficeNumber.jpg"  HeightRequest="30" WidthRequest="30" Aspect="AspectFit" HorizontalOptions="Start" VerticalOptions="Start"/>
+                                </AbsoluteLayout>
+                                    <Entry x:Name="txtOfficeNumber" Opacity="0.5" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Placeholder="Office Number" MaxLength="10" PlaceholderColor="#676578" TextColor="Black"  Text="{Binding MobileNumber}"  >
+                                </Entry>
+                            </StackLayout>
+                            <Label x:Name="labelOfficeNumber" TextColor="Red"></Label>
+                            <StackLayout Orientation="Horizontal" BackgroundColor="White">
+                                <AbsoluteLayout Padding="10">
+                                        <Image Source="MobileNumber.png"  HeightRequest="30" WidthRequest="30" Aspect="AspectFit" HorizontalOptions="Start" VerticalOptions="Start"/>
+                                </AbsoluteLayout>
+                                    <Entry x:Name="MobileNumber" Opacity="0.5" HorizontalOptions="FillAndExpand" Keyboard="Numeric" Placeholder="Mobile Number" MaxLength="10" PlaceholderColor="#676578" TextColor="Black"  Text="{Binding MobileNumber}"  >
+                                </Entry>
+                            </StackLayout>
+                            <Label x:Name="lblOfficeNumber" TextColor="Red"></Label>
+                            <StackLayout Orientation="Horizontal"  BackgroundColor="White">
+                                <AbsoluteLayout Padding="10">
+                                        <Image Source="CompanyAddress.png"  HeightRequest="30" WidthRequest="30" Aspect="AspectFit" HorizontalOptions="Start" VerticalOptions="Start"/>
+                                </AbsoluteLayout>
+                                    <Entry x:Name="CompanyAddress" Opacity="0.5" MaxLength="15" HorizontalOptions="FillAndExpand" Placeholder="Company Address" PlaceholderColor="#676578"  HeightRequest="40"  TextColor="Black" Text="{Binding ConfirmPassword}">
+                                </Entry>
+                            </StackLayout>
+                            <Label x:Name="lblCompanyAddress" TextColor="Red"></Label>
+                            <StackLayout Orientation="Horizontal" Spacing="5" Padding="1">
+                                    <Button x:Name="btnSubmit" Text="Submit" TextColor="Gray"  
+                    FontAttributes="None" FontSize="Medium" HorizontalOptions="FillAndExpand"  
+                    BackgroundColor="White" BorderColor="Gray" BorderWidth="1" Clicked="btnSubmit_Clicked" />
+                            </StackLayout>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                        <Button x:Name="btnLogin" Text="Login" BackgroundColor="White" Clicked="btnLogin_Clicked" BorderColor="Gray" BorderWidth="1" TextColor = "Gray" FontSize="Medium" Grid.Column="1" HorizontalOptions="EndAndExpand"/>
+                                        <Button x:Name="btnForgot" Text="Forgot Password?" BorderColor="Gray" BorderWidth="1" BackgroundColor="White" Clicked="btnForgot_Clicked" TextColor = "Gray" FontSize="Medium" Grid.Column="0" HorizontalOptions="Start"/>
+                                </Grid>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
